@@ -1,7 +1,6 @@
 var toUpper = false;
 var isShift = false;
 function main(input) {
-    console.log(input)
     let output = document.getElementById("demo").textContent;
     if (toUpper) {
         output = output + String(input).toLocaleUpperCase();
@@ -24,6 +23,11 @@ function backspace() {
 }
 function upperCase() {
     toUpper = !toUpper
+    if (toUpper) {
+        document.getElementById("caplock").style.backgroundColor = "#ffff99";
+    }else{
+        document.getElementById("caplock").style.backgroundColor = "transparent";
+    }
     return toUpper;
 }
 function shift() {
