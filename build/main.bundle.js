@@ -1,6 +1,7 @@
 var toUpper = false;
 var isShift = false;
 function main(input) {
+    console.log(input)
     let output = document.getElementById("demo").textContent;
     if (toUpper) {
         output = output + String(input).toLocaleUpperCase();
@@ -13,6 +14,7 @@ function main(input) {
     } else {
         output = output + input;
         document.getElementById("demo").innerHTML = output;
+        
     }
 }
 function backspace() {
